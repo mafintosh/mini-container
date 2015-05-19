@@ -1,0 +1,24 @@
+{
+  "name": "mini-container",
+  "version": "0.0.0",
+  "description": "A minimal container runtime that does very few things",
+  "main": "index.js",
+  "bin": {
+    "mini-container": "./bin.js"
+  },
+  "dependencies": {
+    "execspawn": "^0.2.1",
+    "minimist": "^1.1.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mafintosh/mini-container.git"
+  },
+  "author": "Mathias Buus (@mafintosh)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mafintosh/mini-container/issues"
+  },
+  "homepage": "https://github.com/mafintosh/mini-container"
+}

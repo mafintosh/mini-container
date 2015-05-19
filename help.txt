@@ -1,0 +1,5 @@
+Usage: mini-container [command] [options]
+
+  --cwd, -c     [/path/to/container]
+  --volume, -v  [/host=/container]
+  --print, -p   (print boot command instead of executing it)
