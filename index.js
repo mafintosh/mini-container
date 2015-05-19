@@ -12,8 +12,9 @@ boot.command = function (cmd, opts) {
   var dir = opts.cwd || process.cwd()
   var volumes = opts.volumes || {}
   var cmds = []
+  var procPath = JSON.stringify(path.join(dir, 'proc'))
 
-  cmds.push('mount -t proc proc ' + JSON.stringify(path.join(dir, 'proc')))
+  cmds.push('mount -t proc ' + proc + ' ' + proc)
 
   Object.keys(volumes).forEach(function (host) {
     var childPath = JSON.stringify(path.join(dir, volumes[host]))

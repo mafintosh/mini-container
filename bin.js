@@ -36,5 +36,5 @@ if (!command || argv.help) {
   return
 }
 
-if (argv.print) console.log(boot.command(cmd, opts))
+if (argv.print) console.log(boot.command(command, opts))
 else boot(command, opts)
