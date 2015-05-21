@@ -20,11 +20,9 @@ boot.command = function (cmd, opts) {
 
   cmds.push('mount -t proc proc ' + procPath)
   cmds.push('mount -t sysfs sys ' + sysPath)
-  cmds.push('mount -t bind /dev ' + devPath)
 
   cleanup.push('umount ' + procPath)
   cleanup.push('umount ' + sysPath)
-  cleanup.push('umount ' + devPath)
 
   Object.keys(volumes).forEach(function (host) {
     var childPath = JSON.stringify(path.join(dir, volumes[host]))
@@ -33,7 +31,7 @@ boot.command = function (cmd, opts) {
     cmds.push('mount --bind ' + hostPath + ' ' + childPath)
   })
 
-  return '/bin/sh -c \'' + cmds.join('; ') + '\' >/dev/null 2>&1; chroot . ' + cmd + '; ' + cleanup.join('; ')
+  return '/bin/sh -c \'' + cmds.join('; ') + '\'; chroot . ' + cmd + '; ' + cleanup.join('; ')
 }
 
 module.exports = boot
