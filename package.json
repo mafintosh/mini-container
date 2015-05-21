@@ -1,6 +1,6 @@
 {
   "name": "mini-container",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "A minimal container runtime that does very few things",
   "main": "index.js",
   "bin": {
